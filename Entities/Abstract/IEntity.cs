@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entities.Concrete;
 
-namespace DataAccess.Abstract
+namespace Entities.Abstract
 {
-    public interface ICarDal:IEntityRepository<Car>
+    public interface IEntity
     {
-        
+
     }
 }
