@@ -17,7 +17,7 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(u => u.LastName).NotEmpty();
             RuleFor(u => u.LastName).MinimumLength(2);
             RuleFor(u => u.Email).NotEmpty();
-            RuleFor(u => u.Email).EmailAddress().WithMessage("Geçerli Bir Email Adresi Giriniz");
+            RuleFor(u => u.Email).EmailAddress().WithMessage("Geçerli Bir Email Adresi Giriniz!");
             RuleFor(u => u.Password).NotEmpty();
             RuleFor(u => u.Password).MinimumLength(4);
 
