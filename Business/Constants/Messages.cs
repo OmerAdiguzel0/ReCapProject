@@ -17,6 +17,12 @@ namespace Business.Constants
         public static string CarAlreadyRented = "Araç Kiralama İşlemi Başarısız. Seçili Araç Kirada!";
         public static string RentalSuccessful = "Araç Kiralama İşlemi Başarılı!";
         public static string CouldNotCarAdded = "Araç Eklenemedi!";
-
+        public static string CarCountOfBrandError="Bir Markadan En Fazla 10 Araç Eklenebilir!";
+        public static string BrandNameAlreadyExists="Marka İsmi Veritabanına Zaten Kayıtlı!";
+        public static string ColorLimitExceded="Renk Limiti Aşıldı!";
+        public static string ImageUploaded="Resim Yüklendi!";
+        public static string DeletedImage="Resim Silindi!";
+        public static string UpdatedImage="Resim Güncellendi!";
+        public static string CarImageCountOfCarError="Bir Arabanın En Fazla 5 Resmi Olabilir";
     }
 }
