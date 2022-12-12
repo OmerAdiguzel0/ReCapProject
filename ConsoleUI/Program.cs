@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -19,10 +20,10 @@ namespace ConsoleUI
             //CarDetailTest();
             //UserTest();
             //CustomerTest();
-            RentalTest();
+            //RentalTest();
         }
 
-        private static void RentalTest()
+       /* private static void RentalTest()
         {
             RentalManager rentalManager = new RentalManager(new EfRentalDal());
             var result = rentalManager.Add(new Rental { CarId = 3, CustomerId = 2, RentDate = new DateTime(2021, 12, 12) });
@@ -96,6 +97,6 @@ namespace ConsoleUI
                 Console.WriteLine(result.Message);
             }
             
-        }
+        }*/
     }
 }

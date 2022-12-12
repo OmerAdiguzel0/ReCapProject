@@ -13,6 +13,7 @@ using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
 using Business.CCS;
 using Core.Utilities.Helpers.FileHelper;
+using Core.Utilities.Security.JWT;
 
 namespace Business.DependencyResolvers.Autofac
 {
@@ -32,9 +33,6 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<RentalManager>().As<IRentalService>().SingleInstance();
             builder.RegisterType<EfRentalDal>().As<IRentalDal>().SingleInstance();
 
-            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
-            builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
-
             builder.RegisterType<CustomerManager>().As<ICustomerService>().SingleInstance();
             builder.RegisterType<EfCustomerDal>().As<ICustomerDal>().SingleInstance();
 
@@ -44,6 +42,12 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<FileHelper>().As<IFileHelper>().SingleInstance();
 
             builder.RegisterType<FileLogger>().As<ILogger>().SingleInstance();
+
+            builder.RegisterType<UserManager>().As<IUserService>();
+            builder.RegisterType<EfUserDal>().As<IUserDal>();
+
+            builder.RegisterType<AuthManager>().As<IAuthService>();
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
