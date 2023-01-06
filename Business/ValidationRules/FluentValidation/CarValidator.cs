@@ -21,6 +21,12 @@ namespace Business.ValidationRules.FluentValidation
             RuleFor(c => c.ModelYear).NotEmpty();
             //RuleFor(c => c.ModelYear).LessThanOrEqualTo(DateTime.Now.Year).WithMessage("Arabanın Model Yılı İçinde Bulunduğumuz Yıldan Küçük Olmalıdır!");
             //RuleFor(c => c.DailyPrice).GreaterThanOrEqualTo(200).When(c => c.ModelYear == 2023);
+            //RuleFor(c => c.Description).Must(StartWithA).WithMessage("Araba Açıklaması A Harfi İle Başlamalı");
+        }
+
+        private bool StartWithA(string arg)
+        {
+            return arg.StartsWith("A");           
         }
     }
 }
