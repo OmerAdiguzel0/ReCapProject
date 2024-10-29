@@ -97,7 +97,7 @@ namespace Business.Concrete
         private IResult CheckInCarCountOfBrandCorrect(int brandId)
         {
             var result = _carDal.GetAll(c=>c.BrandId == brandId).Count;
-            if (result>=15)
+            if (result>=10)
             {
                 return new ErrorResult(Messages.CarCountOfBrandError);
             }
